@@ -17,3 +17,45 @@ function update() {
     w1.updatePosition();
     w1.render(ctx);
 }
+
+function keyDown(e) {
+    console.log(e.keyCode);
+    if (e.keyCode == 37) {
+        //Vänster
+        w1.vx = -2;
+    }
+    if (e.keyCode == 38) {
+        //Upp
+        w1.vy = -2;
+    }
+    if (e.keyCode == 39) {
+        //Höger
+        w1.vx = 2;
+    }
+    if (e.keyCode == 40) {
+        //Ner
+        w1.vy = 2;
+    }
+
+}
+
+function keyUp(e) {
+    console.log(e.keyCode);
+    if (e.keyCode == 37) {
+        //Vänster
+        w1.vx = 0;
+    }
+    if (e.keyCode == 38) {
+        //Upp
+        w1.vy = 0;
+    }
+    if (e.keyCode == 39) {
+        //Höger
+        w1.vx = 0;
+    }
+    if (e.keyCode == 40) {
+        //Ner
+        w1.vy = 0;
+    }
+
+}
